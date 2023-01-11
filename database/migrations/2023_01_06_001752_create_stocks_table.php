@@ -15,7 +15,10 @@ return new class extends Migration
     {
         Schema::create('stocks', function (Blueprint $table) {
             $table->id();
-            $table->string("name");
+            $table->bigInteger("product_id");
+            $table->foreign("product_id")
+                ->references("id")
+                ->on("products");
             $table->double("retail_price");
             $table->double("sales_price");
             $table->integer("qty");

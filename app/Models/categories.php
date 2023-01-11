@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class distributer extends Model
+class categories extends Model
 {
     use HasFactory;
 
-    function orders(){
-        return $this->hasMany(Order::class, 'dstributer_id');
+    function expenses(){
+        return $this->hasMany(expense::class, "category_id");
     }
 }

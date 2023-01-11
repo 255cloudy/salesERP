@@ -13,17 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('expenses', function (Blueprint $table) {
+        Schema::create('categories', function (Blueprint $table) {
             $table->id();
             $table->string("name");
-            $table->double("amount");
-            $table->boolean("foxed");
-//            $table->bigInteger("interval_id")->nullable();
-//            $table->foreign("interval_id")
-//                ->references("id")
-//                ->on("intervals");
-            $table->bigInteger("category_id");
-            $table->foreign("category_id")->references("id")->on("categories");
+            $table->string("description");
             $table->timestamps();
         });
     }
@@ -35,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('expenses');
+        Schema::dropIfExists('categories');
     }
 };

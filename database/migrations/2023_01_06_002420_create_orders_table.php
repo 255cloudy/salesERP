@@ -21,6 +21,9 @@ return new class extends Migration
             $table->foreign("distributer_id")
                 ->references("id")
                 ->on("distributers");
+            $table->bigInteger("received_by");
+            $table->foreign("received_by")->references("id")->on("users");
+
         });
     }
 

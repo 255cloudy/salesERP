@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class stock extends Model
 {
     use HasFactory;
+
+    public function product(){
+        $this->belongsTo(product::class, "product_id");
+    }
 }
