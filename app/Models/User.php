@@ -45,7 +45,10 @@ class User extends Authenticatable
 
     function sales(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
-        return $this->hasMany(User::class, "user_id");
+        return $this->hasMany(sale::class, "user_id");
+    }
+    function  orders(){
+        return $this->hasMany(order::class, "user_id");
     }
 
 }

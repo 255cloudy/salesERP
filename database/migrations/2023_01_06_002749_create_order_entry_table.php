@@ -23,7 +23,7 @@ return new class extends Migration
                 ->on("products");
             $table->integer("qty");
             $table->double("retail_price");
-            $table->double("sale_price");
+//            $table->double("sale_price");
             $table->boolean("received")->default(false);
             $table->timestamps();
         });

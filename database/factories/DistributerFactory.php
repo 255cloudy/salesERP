@@ -3,14 +3,15 @@
 namespace Database\Factories;
 
 use App\Models\categories;
+use App\Models\distributer;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\categories>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\distributer>
  */
-class CategoriesFactory extends Factory
+class DistributerFactory extends Factory
 {
-     protected  $model = categories::class;
+    protected  $model = distributer::class;
     /**
      * Define the model's default state.
      *
@@ -19,8 +20,7 @@ class CategoriesFactory extends Factory
     public function definition()
     {
         return [
-            "name" => $this->faker->name(),
-            "description" => $this->faker->sentence
+            "name"=> $this->faker->name
         ];
     }
 }

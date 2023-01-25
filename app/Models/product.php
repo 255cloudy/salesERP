@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Database\Factories\ProductFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -17,5 +18,9 @@ class product extends Model
     }
     function stock(){
         $this->hasMany(stock::class, "product_id");
+    }
+    protected static function newFactory()
+    {
+        return ProductFactory::new();
     }
 }

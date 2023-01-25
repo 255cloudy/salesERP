@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string("name");
             $table->double("amount");
-            $table->boolean("foxed");
+            $table->boolean("reoccurring");
 //            $table->bigInteger("interval_id")->nullable();
 //            $table->foreign("interval_id")
 //                ->references("id")
